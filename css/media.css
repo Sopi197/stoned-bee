@@ -1,0 +1,6 @@
+@media(max-width: 410px){
+   canvas{
+      width: 300px;
+   }
+
+}

@@ -1,0 +1,106 @@
+body{
+   background: #34163b;
+   text-align: center;
+}
+
+canvas{
+   width: 400px;
+   height: 200px;
+   background: #0099ff;
+   transition-duration: 5s;
+}
+
+#text{
+   margin: 0 0 30px -30px;
+   max-width: 400px;
+   font-size: 24px;
+   color: orange;
+   font-style: italic;
+   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+   text-align: center;
+}
+
+#music{
+   opacity: 0;
+}
+
+canvas {
+   position: relative;
+   top: 0;
+   animation-name: green-circle;
+   animation-duration: 5s;
+   animation-timing-function: ease-in-out;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   animation-delay: 1s;
+   animation-fill-mode: forwards;
+}
+
+/*пауза при нажатии*/
+canvas:active{
+   animation-name: none;
+}
+
+@keyframes green-circle{
+   0%{
+      top: 0;
+   }
+   10%{
+      background: green;
+      border-radius: 10%;
+      transform: skew(15deg, 25deg);
+      box-shadow: 4px 4px 8px 4px rgba(49, 236, 203, 0.69);
+   }
+   20%{
+      background: #ece;
+      border-radius: 20%;
+      transform: translate(170px, 170px) scale(1) rotate(180deg);
+   }
+   30%{
+      background: #ad3;
+      border-radius: 30%;
+      box-shadow: rgba(123, 222, 0, 1) 0px 54px 55px, rgba(231, 33, 222, 1) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(123, 23, 222, 1) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   }
+   40%{
+      background: pink;
+      border-radius: 40%;
+      width: 300px;
+   }
+   50%{
+      background: orange;
+      height: 100px;
+      transform: rotate(380deg);
+   }
+   65%{
+      background: tomato;
+      border-radius: 80%;
+      transform: skew(60deg, 60deg);
+   }
+   70%{
+      box-shadow: rgba(155, 255, 155, 1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 1) 0px 50px 100px -20px, rgba(1, 1 , 223, 1) 0px 30px 60px -30px;
+      background: red;
+      transform: translate(170px, -170px) scale(0.7) rotate(360deg);
+   }
+   80%{
+      background: #ff33cc;
+      transform: translate3D(0px, 0px, 0px);
+      background-color: #794f45;
+   }
+   90%{
+      background: #FF69B4;
+      transform: scale3d(1, 1, 1);
+      background-color: #77608d;
+      box-shadow: 
+   }
+   100%{
+      opacity: 0.3;
+      background: #0099CC;
+      box-shadow: 4px 4px 8px 4px rgba(225, 236, 49, 0.97);
+      top: 400px;
+      width: 350px;
+      height: 300px;
+      background-color: rgba(155, 255, 255, 1);
+      perspective: 500px;
+      transform-style: preserve-3d;
+   }
+}
